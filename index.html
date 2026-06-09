@@ -1,236 +1,104 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشروع حفظ النعمة</title>
-    <style>
-        /* ألوان وتنسيقات عامة */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        /* شريط التنقل */
-        header {
-            background-color: #2e7d32; /* أخضر يعبر عن النماء */
-            color: white;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        header .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* القسم الرئيسي */
-        .hero {
-            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            background-color: #ff9800; /* برتقالي لجذب الانتباه */
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 18px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #e68a00;
-        }
-
-        /* الأقسام العامة */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            color: #2e7d32;
-            margin-bottom: 30px;
-        }
-
-        /* الإحصائيات */
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            margin: 40px 0;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .stat-item h3 {
-            font-size: 36px;
-            color: #ff9800;
-            margin: 0;
-        }
-
-        /* النموذج */
-        .form-container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        /* التذييل */
-        footer {
-            background-color: #1b5e20;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
 </head>
 <body>
-
-    <header>
-        <div class="logo">جمعية حفظ النعمة</div>
-        <nav>
-            <a href="#">الرئيسية</a>
-            <a href="#about">عن المشروع</a>
-            <a href="#request">طلب جمع طعام</a>
-            <a href="#contact">اتصل بنا</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>شكر النعم يبدأ بحفظها</h1>
-        <p>نساهم في إيصال فائض الطعام إلى الأسر المتعففة بكل كرامة وجدية.</p>
-        <a href="#request" class="btn">اطلب سيارة الحفظ الآن</a>
-    </section>
-
-    <div class="container">
-        
-        <section id="about" style="text-align: center; margin-bottom: 50px;">
-            <h2 class="section-title">عن المشروع</h2>
-            <p style="font-size: 18px; line-height: 1.8; max-width: 800px; margin: 0 auto;">
-                مشروع "حفظ النعمة" هو مبادرة خيرية تهدف إلى تقليل الهدر الغذائي من خلال جمع فائض الطعام من المناسبات، الفنادق، والمطاعم، وإعادة تأهيله وتعبئته بمعايير صحية عالية لتوزيعه على المحتاجين.
-            </p>
-        </section>
-
-        <section class="stats">
-            <div class="stat-item">
-                <h3>+٥٠,٠٠٠</h3>
-                <p>وجبة موزعة</p>
-            </div>
-            <div class="stat-item">
-                <h3>+١,٢٠٠</h3>
-                <p>عائلة مستفيدة</p>
-            </div>
-            <div class="stat-item">
-                <h3>+٣٠٠</h3>
-                <p>متطوع ومتطوعة</p>
-            </div>
-        </section>
-
-        <section id="request">
-            <h2 class="section-title">طلب جمع فائض الطعام</h2>
-            <div class="form-container">
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">الاسم الكريم:</label>
-                        <input type="text" id="name" required placeholder="أدخل اسمك الثنائي">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">رقم الجوال:</label>
-                        <input type="tel" id="phone" required placeholder="05xxxxxxxx">
-                    </div>
-                    <div class="form-group">
-                        <label for="location">المدينة / الحي:</label>
-                        <input type="text" id="location" required placeholder="مثال: الرياض - حي الياسمين">
-                    </div>
-                    <div class="form-group">
-                        <label for="type">نوع المناسبة:</label>
-                        <select id="type">
-                            <option>زواج / قاعة افراح</option>
-                            <option>مناسبة عائلية</option>
-                            <option>مطعم / فندق</option>
-                            <option>أخرى</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="notes">ملاحظات إضافية (الوقت المتوقع، حجم الفائض):</label>
-                        <textarea id="notes" rows="4" placeholder="مثال: العشاء جاهز الساعة 10 مساءً، ويكفي لـ 50 شخص تقريباً"></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%; border-radius: 5px;">إرسال الطلب</button>
-                </form>
-            </div>
-        </section>
-
-    </div>
-
-    <footer id="contact">
-        <p>جميع الحقوق محفوظة © مشروع حفظ النعمة 2026</p>
-        <p>للتواصل المباشر: 920000000 | ايميل: info@neamah.org</p>
-    </footer>
-
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ar" dir="rtl"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;معارض سيارات&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Tahoma, Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f4f4f4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #111827;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 900px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 30px auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 10px #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1, h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #1f2937;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.car {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 15px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fafafa;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #111827;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;معارض سيارات&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;أفضل السيارات الجديدة والمستعملة بأسعار مناسبة&lt;/p&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p1">&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;عن المعرض&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;</p>
+<p dir="rtl" class="p1"><span class="Apple-converted-space">    </span>يقدم معرضنا مجموعة متنوعة من السيارات الحديثة والمستعملة، مع ضمان الجودة</p>
+<p dir="rtl" class="p1"><span class="Apple-converted-space">    </span>وخدمة العملاء، وإمكانية التواصل للاستفسار عن الأسعار والعروض المتاحة.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p1">&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;السيارات المتوفرة&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="car"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3&gt;تويوتا كامري 2022&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;الحالة: مستعملة نظيفة&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;السعر: 85,000 ريال&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="car"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3&gt;هيونداي سوناتا 2021&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;الحالة: مستعملة&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;السعر: 72,000 ريال&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="car"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3&gt;لكزس ES 350 2020&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;الحالة: فاخرة ونظيفة&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;السعر: 145,000 ريال&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p1">&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;تواصل معنا&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;رقم الجوال: 05XXXXXXXX&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;الموقع: المملكة العربية السعودية&lt;/p&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;جميع الحقوق محفوظة ©️ معارض سيارات&lt;/p&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+<p class="p1">``</p>
 </body>
 </html>
